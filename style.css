@@ -1,4 +1,7 @@
-
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     margin: 0;
     padding: 0;
@@ -11,33 +14,6 @@ a{
     text-decoration: none;
 }
 
-header{
-    width: 1140px;
-    max-width: 80%;
-    margin: auto;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-}
-
-header a{
-    color: #eee;
-    margin-right: 5px;
-    padding: 5px 10px;
-    transition: 0.2s;
-}
-
-a.active{
-    background: #14ff72cb;
-    border-radius: 2px;
-}
-
-header a:hover{
-    background: #14ff72cb;
-    border-radius: 2px;
-}
 
 
 /* slider section  */
@@ -75,12 +51,10 @@ header a:hover{
 
 .slider .list .item .content .title,
 .slider .list .item .content .type{
-    font-size: 5em;
     font-weight: bold;
     line-height: 1.3em;
 }
 .slider .list .item .type{
-    color: #14ff72cb;
 }
 .slider .list .item .button{
     display: grid;
@@ -156,17 +130,14 @@ header a:hover{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #14ff72cb;
     border: none;
-    color: #fff;
     font-family: monospace;
     font-weight: bold;
     transition: .5s;
     cursor: pointer;
 }
 .nextPrevArrows button:hover{
-    background-color: #fff;
-    color: #000;
+    
 }
 
 /* Animation Part */
@@ -321,9 +292,6 @@ header a:hover{
 .title h4{
     display: inline-block;
     padding: 20px;
-    color: #585757;
-    font-size: 50px;
-    font-weight: 500;
     letter-spacing: 1.2px;
     word-spacing: 5px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -472,7 +440,6 @@ padding: 0.8rem 1.1rem;
 border-radius: 20px;
 margin: 0.5rem 0 1rem 0;
 font-size: 1.2rem;
-color: #0dafeb;;
 box-shadow:
 inset 5px 5px 11px rgba(0, 0, 0, 0.2),
 inset -5px -5px 11px rgba(255, 255, 255, 0.75);
@@ -485,7 +452,6 @@ width: 100%;
 margin: 0.6rem 0 1rem 0;
 cursor: pointer;
 font-size: 1.2rem;
-color: #0dafeb;
 text-transform: capitalize;
 padding: 0.9rem;
 border-radius: 20px;
@@ -502,3 +468,7 @@ inset -5px -5px 11px rgba(255, 255, 255, 0.75);
 .neumorphic-card__footer p {
 text-align: center;
 font-size
+
+
+
+}
