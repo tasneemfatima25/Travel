@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+<header class="absolute top-0 left-0 flex-wrap sm:justify-start sm:flex-col z-50 w-full bg-black bg-opacity-30 pb-2 sm:pb-0 dark:bg-neutral-800 dark:border-neutral-700">
+  <!-- Topbar -->
+  <div class="max-w-[85rem] mx-auto w-full px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-end gap-x-10 w-full py-2 sm:pt-2 sm:pb-0">
+      <a class="inline-flex justify-center items-center gap-2 font-medium text-slate-100 hover:text-black md:text-lg text-sm lg:text-2xl" href="#contact">Sign In</a>
+            <a class="inline-flex justify-center items-center gap-2 font-medium text-slate-100 hover:text-black md:text-lg text-sm lg:text-2xl" href="#contactus">Sign Up</a>
+
+    </div>
+  </div>
+  <!-- End Topbar -->
+
+  <nav class="relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8" aria-label="Global">
+    <div class="flex items-center justify-between">
+      <a class="flex-none italic font-georgia lg:h-20 h-10 md:h-16 lg:text-4xl text-white md:text-3xl text-xl font-semibold dark:text-white" href="#" aria-label="Brand">~~PARADISE~~</a>
+      <div class="sm:hidden">
+        <button type="button" class="hs-collapse-toggle flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+          <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
+      <div class="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
+        <a class="lg:text-xl md:text-lg text-sm sm:py-6 text-white hover:text-black" href="#home">Home</a>
+        <a class="lg:text-xl md:text-lg text-sm text-white text-xl hover:text-black sm:py-6 dark:text-neutral-200 dark:hover:text-neutral-400" href="#about">About Us</a>
+        <a class="lg:text-xl md:text-lg text-sm text-white text-xl hover:text-black sm:py-6 dark:text-neutral-200 dark:hover:text-neutral-400" href="#destination">Destinations</a>
+        <a class="lg:text-xl md:text-lg text-sm text-white text-xl hover:text-black sm:py-6 dark:text-neutral-200 dark:hover:text-neutral-400" href="#service">Services</a>
+        <a class="lg:text-xl md:text-lg text-sm text-white text-xl hover:text-black sm:py-6 dark:text-neutral-200 dark:hover:text-neutral-400" href="#contact">Contact</a>
+        <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 bg-white sm:shadow-md rounded-lg p-2 dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5">
+          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300" href="#">
+            About
+          </a>
+          <div class="hs-dropdown relative [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover]">
+            <button type="button" class="w-full flex justify-between items-center text-sm text-gray-800 rounded-lg py-2 px-3 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300">
+              Sub Menu
+              <svg class="sm:-rotate-90 flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+
+            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg p-2 dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700 before:absolute sm:border before:-end-5 before:top-0 before:h-full before:w-5 top-0 end-full !mx-[10px]">
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300" href="#">
+                About
+              </a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300" href="#">
+                Downloads
+              </a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300" href="#">
+                Team Account
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <div class="slider relative">
+        <div class="list">
+            <div class="item">
+                <img src="newyork.png" alt="">
+               <div class="content">
+    <div class=" text-slate-100 font-georgia text-4xl font-bold md:text-4xl lg:text-5xl xl:text-6xl md:mt-[6rem] mt-[4rem] lg:mt-[4rem] ">Book Your Destination For Tours</div>
+     <div class="mt-4 max-w-sm lg:flex md:flex hidden">
+                           
+                        </div>
+</div>
+
+
+            </div>
+              <div class="item">
+                <img src="img4.jpg" alt="">
+
+                <div class="content">
+    <div class="text-slate-100 font-georgia text-4xl font-bold md:text-4xl lg:text-5xl xl:text-6xl md:mt-[6rem] mt-[3rem] lg:mt-[4rem]">Book Your Destination For Hotels</div>
+         <div class="mt-4 max-w-sm lg:flex md:flex hidden">
+                           
+                        </div>
+</div>
+
+            </div>
+            <div class="item">
+                <img src="img3.jpg" alt="">
+
+               <div class="content">
+    <div class="text-slate-100 font-georgia text-4xl font-bold md:text-4xl lg:text-5xl xl:text-6xl md:mt-[6rem] mt-[3rem] lg:mt-[4rem]">Book Your Destination For Flights</div>
+         <div class="mt-4 max-w-sm lg:flex md:flex hidden">
+                           
+                        </div>
+</div>
+
+            </div>
+             <div class="item">
+                <img src="img1.jpg" alt="">
+
+                <div class="content">
+    <div class="text-slate-100 font-georgia text-4xl font-bold md:text-4xl lg:text-5xl xl:text-6xl md:mt-[6rem] mt-[3rem] lg:mt-[4rem]">Book Your Destination For Cars</div>
+         <div class="mt-4 max-w-sm lg:flex md:flex hidden">
+                          
+
+                        </div>
+     </div>
+                </div>
+            </div>
+        </div>
+       <div class="thumbnail">
+            <div class="item">
+                <img src="newyork.png" alt="">
+            </div>
+            <div class="item">
+                <img src="img4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img3.jpg" alt="">
+            </div>
+             <div class="item">
+                <img src="img1.jpg" alt="">
+            </div>
+        </div>
+        <div class="nextPrevArrows">
+            <button class="prev text-black font-bold text-xl bg-white hover:bg-black hover:text-white"> < </button>
+            <button class="next  text-black font-bold text-xl bg-white hover:bg-black hover:text-white"> > </button>
+        </div>
+    </div>
+ <div class="pt-4 text-2xl lg:text-5xl  flex justify-center lg:text-5xl md:text-4xl text-xl text-gray-400 font-['Georgia'] font-bold">About Us</div>
+<!-- Card Blog -->
+<div id="about" class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-slate-100
+mt-4">
+  <!-- Grid -->
+  <div class="grid sm:grid-cols-2 sm:items-center gap-8">
+    <div class="sm:order-2">
+      <div class="relative pt-[50%] sm:pt-[100%] rounded-lg">
+        <img class="size-full absolute top-0 start-0 object-cover rounded-lg" src="about.png">
+      </div>
+    </div>
+    <!-- End Col -->
+
+    <div class="sm:order-1">
+      <p class="mb-5 inline-flex items-center gap-1.5 py-1.5 px-3 rounded-md text-xs md:text-xs lg:text-md xl:text-lg 2xl:text-xl font-medium bg-gray-100 text-gray-500 dark:bg-neutral-800 dark:text-neutral-200 font-['Georgia']">
+         Welcome to PARADISE, your trusted companion in the world of travel.<br><br>
+
+At PARADISE, we're passionate about creating unforgettable experiences for every traveler. Our goal is to simplify the travel planning process and provide you with the tools and inspiration you need to make your journey extraordinary.<br><br>
+
+Our team is dedicated to curating the best destinations, accommodations, and activities, ensuring that every trip you take with us is nothing short of exceptional. From breathtaking natural wonders to vibrant cultural hotspots, we've got you covered.
+<br><br>
+But PARADISE is more than just a travel website – it's a community of adventurers, explorers, and dreamers. Join us as we embark on a journey to discover the world's hidden treasures and create memories that last a lifetime.<br><br>
+
+So whether you're planning your next getaway or simply seeking inspiration for your next adventure, let PARADISE be your guide.<br><br> Happy travels!
+      </p>
+    </div>
+    <!-- End Col -->
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- Icon Blocks -->
+<div class="pt-4 flex justify-center lg:text-5xl md:text-4xl text-xl text-gray-400 font-['Georgia'] font-bold">The World</div>
+
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-slate-100 mt-4">
+  <!-- Grid -->
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 cursor-pointer">
+     <!-- Icon Block -->
+    <a href="theworld.html"><div class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-neutral-700">
+      <!-- Icon -->
+      <div class="flex justify-center items-center size-20
+       bg-slate-100 rounded-lg mx-auto">
+        <img src="icon1.png">
+      </div>
+      <!-- End Icon -->
+
+      <div class="mt-3">
+        <h3 class="text-sm sm:text-lg font-semibold text-gray-800 dark:text-neutral-200 font-['Georgia']">
+          India
+        </h3>
+        <p class="text-lg text-gray-400">places</p>
+      </div>
+    </div></a>
+    <!-- End Icon Block -->
+
+    <!-- Icon Block -->
+    <div class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-neutral-700">
+      <!-- Icon -->
+      <div class="flex justify-center items-center size-20 bg-slate-100 rounded-lg mx-auto">
+        <img src="icon8.png">
+      </div>
+      <!-- End Icon -->
+
+      <div class="mt-3">
+        <h3 class="text-sm sm:text-lg font-semibold text-gray-800 dark:text-neutral-200">
+          Italy
+        </h3>
+        <p class="text-lg text-gray-400">places</p>
+      </div>
+    </div>
+    <!-- End Icon Block -->
+
+    <!-- Icon Block -->
+    <div class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-neutral-700">
+      <!-- Icon -->
+      <div class="flex justify-center items-center size-20 bg-slate-100 rounded-lg mx-auto">
+        <img src="icon7.png">
+      </div>
+      <!-- End Icon -->
+
+      <div class="mt-3">
+        <h3 class="text-sm sm:text-lg font-semibold text-gray-800 dark:text-neutral-200">
+          Egypt
+        </h3>
+        <p class="text-lg text-gray-400">places</p>
+      </div>
+    </div>
+    <!-- End Icon Block -->
+
+    <!-- Icon Block -->
+    <div class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-neutral-700">
+      <!-- Icon -->
+      <div class="flex justify-center items-center size-20
+       bg-slate-100 rounded-lg mx-auto">
+        <img src="icon6.png">
+      </div>
+      <!-- End Icon -->
+
+      <div class="mt-3">
+        <h3 class="text-sm sm:text-lg font-semibold text-gray-800 dark:text-neutral-200">
+          Japan
+        </h3>
+        <p class="text-lg text-gray-400">places</p>
+      </div>
+    </div>
+    <!-- End Icon Block -->
+
+    <!-- Icon Block -->
+    <div class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-neutral-700">
+      <!-- Icon -->
+      <div class="flex justify-center items-center size-20 bg-slate-100 rounded-lg mx-auto">
+       <img src="icon5.png">
+      </div>
+      <!-- End Icon -->
+
+      <div class="mt-3">
+        <h3 class="text-sm sm:text-lg font-semibold text-gray-800 dark:text-neutral-200 font-['Georgia']">
+          Greece
+        </h3>
+        <p class="text-lg text-gray-400">places</p>
+      </div>
+    </div>
+    <!-- End Icon Block -->
+
+    <!-- Icon Block -->
+    <div class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-neutral-700">
+      <!-- Icon -->
+      <div class="flex justify-center items-center size-28 bg-slate-100 rounded-lg mx-auto">
+        <img src="icon4.png">
+      </div>
+      <!-- End Icon -->
+
+      <div class="mt-3">
+        <h3 class="text-sm sm:text-lg font-semibold text-gray-800 dark:text-neutral-200 font-['Georgia']">
+          Dubai
+        </h3>
+        <p class="text-lg text-gray-400">places</p>
+      </div>
+    </div>
+    <!-- End Icon Block -->
+
+    <!-- Icon Block -->
+    <div class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-neutral-700">
+      <!-- Icon -->
+      <div class="flex justify-center items-center size-20 bg-slate-100 rounded-lg mx-auto">
+        <img src="icon3.png">
+      </div>
+      <!-- End Icon -->
+
+      <div class="mt-3">
+        <h3 class="text-sm sm:text-lg font-semibold text-gray-800 dark:text-neutral-200 font-['Georgia']">
+          London
+        </h3>
+        <p class="text-lg text-gray-400">places</p>
+      </div>
+    </div>
+    <!-- End Icon Block -->
+
+    <!-- Icon Block -->
+    <div class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-neutral-700">
+      <!-- Icon -->
+      <div class="flex justify-center items-center size-20 bg-slate-100 rounded-lg mx-auto">
+         <img src="icon2.png">
+      </div>
+      <!-- End Icon -->
+
+      <div class="mt-3">
+        <h3 class="text-sm sm:text-lg font-semibold text-gray-800 dark:text-neutral-200 font-['Georgia']">
+          Paris
+        </h3>
+        <p class="text-lg text-gray-400">places</p>
+      </div>
+    </div>
+    <!-- End Icon Block -->
+
+   
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Icon Blocks -->
+
+    <!-- destination -->
+     <div class="wrapper bg-slate-100 mt-12">
+
+        <div class="title">
+            <h4  class="text-gray-500 lg:text-5xl md:text-4xl text-xl
+             font-bold font-['Georgia']">Popular Destination</h4>
+        </div>
+
+        <div class="card_Container" id="destination">
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="amritsar.png" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Amritsar</h3>
+                        <a href="#contact" class="text-blue-700 font-bold cursor-pointer text-center text-lg">Book Now</a>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="Goa.png" alt="">
+                </div>
+
+           <div class="content">
+                    <div class="contentBx">
+                        <h3>Goa</h3>
+                        <a href="#contact" class="text-blue-700 font-bold cursor-pointer text-center text-lg">Book Now</a>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="agra.png" alt="">
+                </div>
+
+                 <div class="content">
+                    <div class="contentBx">
+                        <h3>Agra</h3>
+                        <a href="#contact" class="text-blue-700 font-bold cursor-pointer text-center text-lg">Book Now</a>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="paris.png" alt="">
+                </div>
+
+                 <div class="content">
+                    <div class="contentBx">
+                        <h3>Paris</h3>
+                        <a href="#contact" class="text-blue-700 font-bold cursor-pointer text-center text-lg">Book Now</a>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="kerala.png" alt="">
+                </div>
+
+                 <div class="content">
+                    <div class="contentBx">
+                        <h3>Kerala</h3>
+                        <a href="#contact" class="text-blue-700 font-bold cursor-pointer text-center text-lg">Book Now</a>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="dubai.webp" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Dubai</h3>
+                        <a href="#contact" class="text-blue-700 font-bold cursor-pointer text-center text-lg">Book Now</a>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="Tokyo.webp" alt="">
+                </div>
+
+                 <div class="content">
+                    <div class="contentBx">
+                        <h3>Tokyo</h3>
+                        <a href="contact" class="text-blue-700 font-bold cursor-pointer text-center text-lg">Book Now</a>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+             <div class="card">
+
+                <div class="imbBx">
+                    <img src="bangkok.png" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Bangkok</h3>
+                        <a href="#contact" class="text-blue-700 font-bold cursor-pointer text-center text-lg">Book Now</a>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="thailand.png" alt="">
+                </div>
+
+                 <div class="content">
+                    <div class="contentBx">
+                        <h3>Thailand</h3>
+                        <a href="#contact" class="text-blue-700 font-bold cursor-pointer text-center text-lg">Book Now</a>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+<div class="max-w-[85rem] px-4 py-8 sm:px-6 lg:px-8 lg:py-12 mx-auto bg-slate-100 ">
+  <!-- Title -->
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-2xl lg:text-5xl font-bold text-gray-400 md:text-4xl md:leading-tight dark:text-white font-['Georgia']">Hotel and Restaurants</h2>
+    <p class="mt-4 text-gray-500 dark:text-neutral-400 text-base text-sm font-['Georgia'] md:text-lg lg:text-lg">Experience exceptional hospitality and culinary delights with our curated selection of hotels and restaurants. From cozy retreats to gourmet dining, we offer memorable experiences tailored to your preferences. Book your stay and dining reservations now with PARADISE for an unforgettable journey.
+</p>
+  </div>
+
+ 
+<div class="flex min-h-screen items-center justify-center bg-slate-100 lg:mt-[-5rem] md:mt-[1rem] mt-0">
+  <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <a href="https://restaurantsphere.com/en/?utm_source=google&utm_medium=cpc&utm_campaign=20513435252&utm_content=161175289918&utm_term=michelin%20star%20paris&gad_source=1&gclid=CjwKCAjwrvyxBhAbEiwAEg_KgnYfMywa2LBRBofzOiWv3vGbuLbzg9ZsP1zNmKQPm4bHAXqy8Wvh9BoCM4EQAvD_BwE" class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+      <div class="h-96 w-72">
+        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src="hotel4.png" alt="" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+      <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+        <h1 class="font-dmserif text-3xl font-bold text-white">Michelin Star (Paris)</h1>
+        <p class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">The restaurant’s philosophy is based on the notion of ‘Essential Cuisine’ to retain the natural and authentic flavours of every dish. The signature delicacies include smoked yoghurt, smoked beef, and grilled silk grain veal amongst others.</p>
+        <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
+      </div>
+    </a>
+    <a href="https://www.cntraveler.com/hotels/india/mumbai/taj-mahal-palace-mumbai" class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+      <div class="h-96 w-72">
+        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src="hotel5.png" alt="" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+      <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+        <h1 class="font-['Georgia'] text-3xl font-bold text-white">Taj Mahal Palace (Mumbai)</h1>
+        <p class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">The Taj Mahal Palace, Mumbai, a historic icon since 1903, blends art and architecture seamlessly. Admire Belgian chandeliers and Indian masterpieces in its diverse interiors. Wander its corridors, then relax in rooms with serene views. Indulge in holistic treatments at the Jiva Spa by the pool for a rejuvenating experience.
+      </p>
+        <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
+      </div>
+    </a>
+    <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+      <div class="h-96 w-72">
+        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src="hotel6.png" alt="" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+      <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+        <h1 class="font-['Georgia'] text-3xl font-bold text-white">Taj Falaknuma Palace (Hyderabad)</h1>
+        <p class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Taj Falaknuma Palace, once the Nizam of Hyderabad's royal abode, now offers guests a regal experience in its restored setting. Richly adorned guestrooms, Rajasthani Garden strolls, and Jiva Spa indulgences await. Dining choices include fine Italian cuisine, garden feasts, and Adaa, an Indian-Hyderabadi fine dining gem.</p>
+        <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flex items-center justify-center bg-slate-100 mt-[1rem] lg:mt-[-6rem] md:mt-[1rem]">
+  <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+      <div class="h-96 w-72">
+        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src="hotel1.png" alt="" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+      <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+        <h1 class="font-['Georgia'] text-3xl font-bold text-white">Avartana (Chennai)</h1>
+        <p class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">ITC Grand Chola, with its verdant surroundings and modern amenities, including a spa and pool, features 11 dining spaces. Avartana, a standout among these, offers a blend of traditional and contemporary Southern Indian cuisine. Don't miss their innovative dishes like Infused Tomato Rasam and Pan Fried Cod.</p>
+        <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
+      </div>
+    </div>
+    <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+      <div class="h-96 w-72">
+        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src="hotel2.png" alt="" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+      <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+        <h1 class="font-['Georgia'] text-3xl font-bold text-white">Rim Naam (Bengaluru)</h1>
+        <p class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Nestled in Bengaluru's Garden City, The Oberoi, Bengaluru, is a haven for business travelers seeking efficiency and luxury. With state-of-the-art IT amenities and four dining options, including the exquisite Rim Naam, guests can seamlessly balance work and leisure amidst serene surroundings.</p>
+        <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
+      </div>
+    </div>
+    <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+      <div class="h-96 w-72">
+        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src="hotel3.png" alt="" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+      <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+        <h1 class="font-['Georgia'] text-3xl font-bold text-white">Masala Bay (Mumbai)</h1>
+        <p class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Taj Lands End, located on Bandra Bandstand, boasts stunning views of Mumbai's skyline, Bandra fort, and the Arabian Sea. Its proximity to airports and modern amenities cater to business travelers. Masala Bay offers a luxurious dining experience with traditional Indian cuisine reinvented with a modern touch.</p>
+        <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+ </div>
+  <!-- End Title -->
+
+<!-- End Card Blog -->
+
+<!-- Card Blog -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-slate-100 mt-12">
+  <!-- Title -->
+  <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+    <h2 class="text-2xl lg:text-5xl font-bold text-gray-400 md:text-4xl md:leading-tight dark:text-white font-['Georgia']">Tranportation Facilities</h2>
+    <p class="mt-4 text-gray-500 dark:text-neutral-400 text-sm font-['Georgia'] md:text-lg lg:text-lg">"Explore hassle-free travel with our comprehensive transportation guide. From flights to trains, buses to rental cars, we've got you covered with essential booking tips, fare comparisons, and safety advice. Make the most of your journey with PARADISE."
+</p>
+  </div>
+
+  <!-- Grid -->
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="service">
+    <!-- Card -->
+    <a class="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-neutral-700 dark:hover:border-transparent dark:hover:shadow-black/40" href="https://www.tourindiawithdriver.com/en6/Car-hire-service-with-driver-in-India">
+      <div class="aspect-w-16 aspect-h-11 overflow-hidden">
+        <img class="w-full object-cover rounded-xl hover:scale-125 duration-1000 " src="car.png" alt="Image Description">
+      </div>
+      <div class="my-6">
+        <h3 class="text-3xl font-['Georgia'] font-semibold text-gray-800 dark:text-neutral-300 dark:group-hover:text-white">
+          Cars
+        </h3>
+        <p class="mt-5 text-gray-500 dark:text-neutral-400 text-sm font-['Georgia']">
+          Embark on your journey with unparalleled comfort and convenience with our car rental services. Our fleet boasts GPS tracking for easy navigation, complimentary Wi-Fi to keep you connected on the go, and air conditioning to ensure a pleasant ride in any weather. Indulge in onboard snacks and beverages as you relax in our plush, push-back seats. Travel in style and ease with PARADISE.
+        </p>
+      </div>
+     
+    </a>
+    <!-- End Card -->
+
+    <!-- Card -->
+    <a href="https://www.sotc.in/flights" class="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-neutral-700 dark:hover:border-transparent dark:hover:shadow-black/40" href="#">
+      <div class="aspect-w-16 aspect-h-11 overflow-hidden">
+        <img class="w-full object-cover rounded-xl hover:scale-125 duration-1000 " src="flight.png" alt="Image Description">
+      </div>
+      <div class="my-6">
+        <h3 class="text-3xl font-['Georgia'] font-semibold text-gray-800 dark:text-neutral-300 dark:group-hover:text-white">
+          Flights
+        </h3>
+        <p class="mt-5 text-gray-600 dark:text-neutral-400 text-sm font-['Georgia']">
+          Experience the wonder of flight with our premium airline services. From seamless booking to comfortable seating and in-flight entertainment, we ensure a smooth and enjoyable journey from takeoff to landing. With a focus on safety and reliability, trust us to make your travel experience exceptional. Book your next flight with PARADISE and soar to your destination with confidence.
+        </p>
+      </div>
+     
+    </a>
+    <!-- End Card -->
+
+    <!-- Card -->
+    <a href="https://www.sotc.in/cruise-holiday-packages" class="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-neutral-700 dark:hover:border-transparent dark:hover:shadow-black/40" href="#">
+      <div class="aspect-w-16 aspect-h-11 overflow-hidden">
+        <img class="w-full object-cover rounded-xl hover:scale-125 duration-1000 " src="cruise.png" alt="Image Description">
+      </div>
+      <div class="my-6">
+        <h3 class="text-3xl font-['Georgia']  font-semibold text-gray-800 dark:text-neutral-300 dark:group-hover:text-white">
+          Cruises
+        </h3>
+        <p class="mt-5 text-gray-600 dark:text-neutral-400 text-sm font-['Georgia']">
+          Set sail on an unforgettable adventure with our cruise packages. Explore exotic destinations, indulge in luxurious amenities, and create lifelong memories aboard our state-of-the-art ships. From gourmet dining to thrilling onboard activities, there's something for everyone to enjoy. Book your dream cruise today with PARADISE and embark on the journey of a lifetime.
+        </p>
+      </div>
+      
+    </a>
+    <!-- End Card -->
+  </div>
+  <!-- End Grid -->
+</div>
+
+
+<section class="flex justify-center bg-slate-100 p-6 mt-8" id="contactus">
+   <div class="flex absolute text-gray-400 font-bold font-georgia text-2xl md:text-5xl lg:text-5xl xl:text-6xl">Sign Up</div>
+
+    <div class="neumorphic-card lg:mt-20 md:mt-20 mt-16">
+        <form onsubmit="event.preventDefault()" action="" class="neumorphic-form">
+            <div class="neumorphic-input-wrapper text-lg mb-4 text-gray-400 font-['Georgia']">
+                <label for="destination">Email</label>
+                <input class="capitalize w-full border border-gray-300 rounded-md px-4 py-2" type="text" name="email" id="email">
+            </div>
+            <div class="neumorphic-input-wrapper text-lg mb-4 text-gray-400 font-['Georgia']">
+                <label for="Password">Password</label>
+                <input class="w-full border border-gray-300 rounded-md px-4 py-2" type="password" name="password" id="password">
+            </div>
+            <button class=" px-4 py-2 rounded-md hover:text-white hover:bg-gray-600 text-gray-400 font-['Georgia']" type="submit">Sign Up</button>
+        </form>
+    </div>
+    
+</section>
+
+
+  
+  </div>
+</section>
+
+
+<!-- ========== CONTACT ========== -->
+<section id="contact" class="py-20 bg-slate-100">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="sm:text-center">
+      <h2 class="md:text-5xl lg:text-5xl text-3xl font-georgia font-bold leading-tight text-gray-500">Contact Us</h2>
+      <p class="mt-4 md:text-xl lg:text-xl text-lg font-bold text-gray-400">We are here to answer your questions</p>
+    </div>
+    <div class="mt-12">
+      <form action="connection.php" method="post" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+        <div>
+          <label for="first-name" class="block text-sm font-medium text-gray-600 md:text-xl lg:text-xl text-lg font-bold">First name</label>
+          <div class="mt-1">
+            <input style="box-shadow:10px 10px 22px rgba(0, 0, 0, 0.2),-10px -10px 22px rgba(255, 255, 255, 0.75);" type="text" name="first-name" id="first-name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-sm border-gray-400 rounded-md bg-[#e0e0e0] text-gray-600 md:text-xl lg:text-xl text-lg font-bold">
+          </div>
+        </div>
+        <div>
+          <label for="last-name" class="block text-sm font-medium text-gray-600 md:text-xl lg:text-xl text-lg font-bold">Last name</label>
+          <div class="mt-1">
+            <input style="box-shadow:10px 10px 22px rgba(0, 0, 0, 0.2),-10px -10px 22px rgba(255, 255, 255, 0.75);" type="text" name="last-name" id="last-name" autocomplete="family-name" class="py-3 px-4 block w-full shadow-sm border-gray-400 rounded-md bg-[#e0e0e0] text-gray-600 md:text-xl lg:text-xl text-lg font-bold">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="email" class="block text-sm font-medium text-gray-600 md:text-xl lg:text-xl text-lg font-bold">Email</label>
+          <div class="mt-1">
+            <input style="box-shadow:10px 10px 22px rgba(0, 0, 0, 0.2),-10px -10px 22px rgba(255, 255, 255, 0.75);" id="email" name="email" type="email" autocomplete="email" class="py-3 px-4 block w-full shadow-sm border-gray-400 rounded-md bg-[#e0e0e0] text-gray-600 md:text-xl lg:text-xl text-lg font-bold">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="phone" class="block text-sm font-medium text-gray-600 md:text-xl lg:text-xl text-lg font-bold">Phone</label>
+          <div class="mt-1">
+            <input style="box-shadow:10px 10px 22px rgba(0, 0, 0, 0.2),-10px -10px 22px rgba(255, 255, 255, 0.75);" type="text" name="phone" id="phone" autocomplete="tel" class="py-3 px-4 block w-full shadow-sm border-gray-400 rounded-md bg-[#e0e0e0] text-gray-600 md:text-xl lg:text-xl text-lg font-bold">
+          </div>
+        </div>
+        
+        <div class="sm:col-span-2">
+          <button style="box-shadow:10px 10px 22px rgba(0, 0, 0, 0.2),-10px -10px 22px rgba(255, 255, 255, 0.75);" type="submit" class="w-full flex items-center justify-center py-3 px-4 block w-full shadow-sm border-gray-400 rounded-md bg-[#e0e0e0] text-gray-600 hover:bg-gray-600 hover:text-white md:text-xl lg:text-xl text-lg font-bold">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- ========== END CONTACT ========== -->
+<!-- footer -->
+  <footer class="bg-gray-900 w-full mx-auto relative mt-0">
+  <div class="w-full  max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
+    <!-- Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-20 right-6">
+      <div class="col-span-full lg:col-span-1 mt-12 lg:top-0 md:bottom-6 bottom-6">
+        <h1 class="text-2xl font-bold italic font-georgia lg:text-4xl md:text-3xl text-xl">~~PARADISE~~</h1></div>
+      <!-- End Col -->
+
+      <div class="col-span-1">
+        <h4 class="text-slate-100 text-2xl font-semibold font-georgia">Contact info</h4>
+
+        <div class="mt-3 grid space-y-0">
+          <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#">+91 8858645338</a></p>
+          <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#">+91 8881117919</a></p>
+          <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#">+91 7380900805
+          </a></p>
+          <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#">paradise@gmail.com</a></p>
+          
+        </div>
+      </div>
+      <!-- End Col -->
+
+      <div class="col-span-1">
+        <h4 class="text-slate-100 text-2xl font-semibold font-georgia">Our Services</h4>
+
+        <div class="mt-3 grid space-y-3">
+          <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#home">Home</a></p>
+          <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#service">Services</a></p>
+          <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#">Privacy Policy</a></p>
+          <p><a class="inline-flex gap-x-2 text-neutral-400 text-lg font-georgia" href="#">Support Forum</a></p>
+          <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#contact">Contact</a></p>
+        </div>
+      </div>
+      <!-- End Col -->
+
+      <div class="col-span-2 lg:block md:block hidden">
+            <div class=" grid space-y-4">
+               <h4 class="text-slate-100 text-2xl font-semibold font-georgia">Tags</h4></div>
+            <div class="grid grid-cols-3 gap-y-4 pt-4">
+
+              <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#">Flights</a></p>
+              <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#">Cruises</a></p>
+              <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#">Booking</a></p>
+              <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#">Hotels</a></p>
+              <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#">Countries</a></p>
+              <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#">Tours</a></p>
+              <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#">Air Rides</a></p>
+              <p><a class="inline-flex gap-x-2 text-neutral-400  text-lg font-georgia" href="#">Adventure</a></p></div>
+              
+
+
+            
+         </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Grid -->
+
+    
+  </div>
+</footer>
+
+
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-gray-900 dark:bg-neutral-800 py-12">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col justify-between md:flex-row gap-10">
+      
+      </div>
+    </div>
+    <p class="mt-6 text-sm text-center text-gray-400 dark:text-gray-300">© 2024 ~~PARADISE~~ - All rights reserved</p>
+  </div>
+</footer>
+<!-- ========== END FOOTER ========== -->
+<script src="scripts/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

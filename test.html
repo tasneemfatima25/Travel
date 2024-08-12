@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <!-- ========== CONTACT ========== -->
+<section id="contact" class="py-20 bg-slate-100">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="sm:text-center">
+      <h2 class="md:text-5xl lg:text-5xl text-3xl font-georgia font-bold leading-tight text-gray-500">Contact Us</h2>
+      <p class="mt-4 md:text-xl lg:text-xl text-lg font-bold text-gray-400">We are here to answer your questions</p>
+    </div>
+    <div class="mt-12">
+      <form action="connection.js" method="post" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+        <div>
+          <label for="first-name" class="block text-sm font-medium text-gray-600 md:text-xl lg:text-xl text-lg font-bold">First name</label>
+          <div class="mt-1">
+            <input style="box-shadow:10px 10px 22px rgba(0, 0, 0, 0.2),-10px -10px 22px rgba(255, 255, 255, 0.75);" type="text" name="first-name" id="first-name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-sm border-gray-400 rounded-md bg-[#e0e0e0] text-gray-600 md:text-xl lg:text-xl text-lg font-bold">
+          </div>
+        </div>
+        <div>
+          <label for="last-name" class="block text-sm font-medium text-gray-600 md:text-xl lg:text-xl text-lg font-bold">Last name</label>
+          <div class="mt-1">
+            <input style="box-shadow:10px 10px 22px rgba(0, 0, 0, 0.2),-10px -10px 22px rgba(255, 255, 255, 0.75);" type="text" name="last-name" id="last-name" autocomplete="family-name" class="py-3 px-4 block w-full shadow-sm border-gray-400 rounded-md bg-[#e0e0e0] text-gray-600 md:text-xl lg:text-xl text-lg font-bold">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="email" class="block text-sm font-medium text-gray-600 md:text-xl lg:text-xl text-lg font-bold">Email</label>
+          <div class="mt-1">
+            <input style="box-shadow:10px 10px 22px rgba(0, 0, 0, 0.2),-10px -10px 22px rgba(255, 255, 255, 0.75);" id="email" name="email" type="email" autocomplete="email" class="py-3 px-4 block w-full shadow-sm border-gray-400 rounded-md bg-[#e0e0e0] text-gray-600 md:text-xl lg:text-xl text-lg font-bold">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="phone" class="block text-sm font-medium text-gray-600 md:text-xl lg:text-xl text-lg font-bold">Phone</label>
+          <div class="mt-1">
+            <input style="box-shadow:10px 10px 22px rgba(0, 0, 0, 0.2),-10px -10px 22px rgba(255, 255, 255, 0.75);" type="text" name="phone" id="phone" autocomplete="tel" class="py-3 px-4 block w-full shadow-sm border-gray-400 rounded-md bg-[#e0e0e0] text-gray-600 md:text-xl lg:text-xl text-lg font-bold">
+          </div>
+        </div>
+        
+        <div class="sm:col-span-2">
+          <input value="Submit" name="submit" style="box-shadow:10px 10px 22px rgba(0, 0, 0, 0.2),-10px -10px 22px rgba(255, 255, 255, 0.75);" type="submit" class="w-full flex items-center justify-center py-3 px-4 block w-full shadow-sm border-gray-400 rounded-md bg-[#e0e0e0] text-gray-600 hover:bg-gray-600 hover:text-white md:text-xl lg:text-xl text-lg font-bold">
+            Submit
+        </div>
+      </form>
+  
+    </div>
+  </div>
+</section>
+<script>
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Prepare form data (username, password)
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+      // Send AJAX request to Node.js server endpoint for signup
+    $.ajax({
+        url: '/api/signup', // Replace with your endpoint URL
+        method: 'POST',
+        data: { username: username, password: password },
+        dataType: 'json',
+        success: function(response) {
+            if (response.message === 'Signup successful') {
+            // Redirect to login page or success message
+            window.location.href = "index.html";
+          } else {
+            // Display error message
+            alert(response.message);
+          }
+        },
+        error: function(error){
+        console.error(error)
+        alert("Am error occured");
+        }
+        });
+     });
+</script>
+  
+</body>
+</html>
